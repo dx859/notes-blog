@@ -39,7 +39,7 @@
 
   // All **ECMAScript 5** native function implementations that we hope to use
   // are declared here.
-  // ES5 原生方法，如果
+  // ES5 原生方法，如果浏览器支持，则 underscore 中会优先使用
   var
     nativeIsArray      = Array.isArray,
     nativeKeys         = Object.keys,
@@ -50,6 +50,7 @@
   var Ctor = function(){};
 
   // Create a safe reference to the Underscore object for use below.
+  // 
   var _ = function(obj) {
     if (obj instanceof _) return obj;
     if (!(this instanceof _)) return new _(obj);
